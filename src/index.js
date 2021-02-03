@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Home from './components/Home';
+import Add from './components/Add';
+import Art from './components/Art';
+import Update from './components/Update';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Routes = (
+  <Router>
+    <div>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/add" component={Add} />
+      <Route path="/art/:id" component={Art} />
+      <Route path="/update/:id" component={Update} />
+    </div>
+  </Router>
+)
+
+
+ReactDOM.render(Routes , document.getElementById('root'));
+
