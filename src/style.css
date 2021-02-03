@@ -127,6 +127,11 @@ button {
   padding: 10px;
 }
 
+#delete {
+  background-color: rgb(238, 27, 27);
+  color: white;
+}
+
 @media (max-width: 940px) {
   #filter {
     display: flex;

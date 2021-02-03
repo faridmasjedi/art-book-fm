@@ -32,7 +32,7 @@ function Art(props){
                 <nav>
                     <a href="/">Home</a>
                     <a href={`/#/update/${id}`}>Update</a>
-                    <button onClick={deleteHandler}>Delete</button>
+                    <button id="delete" onClick={deleteHandler}>Delete</button>
                 </nav>
             </header>
             
