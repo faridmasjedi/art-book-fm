@@ -21,7 +21,7 @@ function Art(props){
     const deleteHandler = () => {
         axios
             .delete(`https://art-book-fm.herokuapp.com/app/delete/${id}`)
-            .then(() => console.log('delete'));
+            .then( setTimeout( () => props.history.push(`/`) , 500 )) ;
     }
 
     return(
@@ -32,7 +32,7 @@ function Art(props){
                 <nav>
                     <a href="/">Home</a>
                     <a href={`/#/update/${id}`}>Update</a>
-                    <a href={'/'} onClick={deleteHandler}>Delete</a>
+                    <button onClick={deleteHandler}>Delete</button>
                 </nav>
             </header>
             
